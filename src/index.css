@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: 228, 10, 19;
+  --light: 255, 255, 255;
+  --dark: 54, 54, 54;
+  --orange: 244, 173, 76;
+  --primary: 255, 255, 255;
+  --secondary: 245, 245, 245;
+  --line: 223, 223, 223;
+  --alert: 180, 19, 19;
+  --success: 14, 165, 38;
+  --warning: 211, 180, 14;
+  --info: 58, 27, 248;
+  --body: 152, 152, 152;
+}
+
+.dark {
+  --accent: 228, 10, 19;
+  --light: 64, 64, 64;
+  --primary: 13, 17, 23;
+  --secondary: 1, 4, 9;
+  --dark: 255, 255, 255;
+  --line: 48, 54, 61;
+  --alert: 180, 19, 19;
+  --success: 14, 165, 38;
+  --warning: 211, 180, 14;
+  --info: 58, 27, 248;
+  --body: 188, 188, 188;
+}
+
+@layer base {
+  body {
+    @apply text-body font-['Poppins']  min-h-screen w-full bg-primary;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1800px] mx-auto px-4 bg-dark;
+  }
+
+  .btn-animate {
+    @apply text-center inline-block text-xs px-5 py-2.5 bg-light text-dark rounded-md 
+    text-transparent uppercase relative overflow-hidden;
+  }
+  .btn-animate::before {
+    @apply transition-all absolute content-[attr(data-text)] bottom-2 left-0 w-full text-dark block;
+  }
+  .btn-animate::after {
+    @apply transition-all absolute content-[attr(data-text)] -bottom-[14px] left-0 w-full text-dark block;
+  }
+  .btn-animate:hover::before {
+    @apply bottom-10 duration-300;
+  }
+  .btn-animate:hover::after {
+    @apply bottom-2 duration-300;
+  }
+  .skill-card img {
+    @apply h-[400px] w-[540px] rounded-md;
+  }
+}
