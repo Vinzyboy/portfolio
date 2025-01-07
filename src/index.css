@@ -59,6 +59,6 @@
     @apply bottom-2 duration-300;
   }
   .skill-card img {
-    @apply h-[400px] w-[540px] rounded-md;
+    @apply h-[300px] w-[500px] rounded-md object-cover;
   }
 }

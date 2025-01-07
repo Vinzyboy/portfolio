@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./partials/Header";
 import Home from "./Home";
-import Footer from "./Footer";
+import Footer from "./partials/Footer";
+
 
 const Homepage = () => {
   return (
